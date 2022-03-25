@@ -2,12 +2,12 @@
 lab:
   title: '랩 16: Azure IoT Hub를 통해 IoT 디바이스 관리 자동화'
   module: 'Module 8: Device Management'
-ms.openlocfilehash: c6c385f4f1d9dcd09b9cff85b7de31b9146f544d
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 3b752cc477c664f1c44b754c49b2e20542de1f72
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421533"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872827"
 ---
 # <a name="automate-iot-device-management-with-azure-iot-hub"></a>Azure IoT Hub를 통해 IoT 디바이스 관리 자동화
 
@@ -74,7 +74,7 @@ IT 부서는 운영자를 위해 개발한 백 엔드 포털을 유지 관리하
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab16.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab16.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

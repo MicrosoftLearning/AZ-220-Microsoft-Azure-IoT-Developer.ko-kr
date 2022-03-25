@@ -2,12 +2,12 @@
 lab:
   title: '랩 13: VS 코드로 Azure IoT Edge에서 사용자 지정 모듈 개발, 배포, 디버깅'
   module: 'Module 7: Azure IoT Edge Modules'
-ms.openlocfilehash: 82a9ba817cbebae71e79a4f4d44c2e4e635daba5
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 4908d19567e43a164d559638467ea4d3373c6902
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421485"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872795"
 ---
 # <a name="develop-deploy-and-debug-a-custom-module-on-azure-iot-edge-with-vs-code"></a>VS 코드로 Azure IoT Edge에서 사용자 지정 모듈 개발, 배포 및 디버깅
 
@@ -62,7 +62,7 @@ ms.locfileid: "138421485"
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab13.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab13.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

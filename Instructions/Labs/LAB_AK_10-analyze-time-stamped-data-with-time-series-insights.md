@@ -2,12 +2,12 @@
 lab:
   title: '랩 10: Time Series Insights로 시간이 기록된 데이터 탐색 및 분석'
   module: 'Module 5: Insights and Business Integration'
-ms.openlocfilehash: 18a259548251ab583e49594b2f4bac2b458136fa
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 9f6491dadc9d4443575690d00c92805b12b2f874
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421527"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872798"
 ---
 # <a name="explore-and-analyze-time-stamped-data-with-time-series-insights"></a>Time Series Insights로 시간이 기록된 데이터 탐색 및 분석
 
@@ -54,7 +54,7 @@ Azure IoT 솔루션에 Time Series Insights를 추가하는 것을 제안합니�
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab10.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab10.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

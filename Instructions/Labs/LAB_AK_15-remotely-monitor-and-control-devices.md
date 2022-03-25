@@ -2,12 +2,12 @@
 lab:
   title: '랩 15: Azure IoT Hub를 사용하여 원격으로 디바이스 모니터링 및 제어'
   module: 'Module 8: Device Management'
-ms.openlocfilehash: 086ab275071ffdf4b2e1c6259ca15c914d48ddf1
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: f0ebccb4b7c7b415397ba0b36ddbb7c96e59717c
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421509"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872801"
 ---
 # <a name="remotely-monitor-and-control-devices-with-azure-iot-hub"></a>Azure IoT Hub를 사용하여 원격으로 디바이스 모니터링 및 제어
 
@@ -74,7 +74,7 @@ Contoso로부터 동굴 환경을 제어 범위 내에서 유지하는 자동 �
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab15.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab15.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

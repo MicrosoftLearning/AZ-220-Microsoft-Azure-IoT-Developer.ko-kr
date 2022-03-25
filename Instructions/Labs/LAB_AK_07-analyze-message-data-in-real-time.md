@@ -2,12 +2,12 @@
 lab:
   title: '랩 07: 디바이스 메시지 라우팅'
   module: 'Module 4: Message Processing and Analytics'
-ms.openlocfilehash: 4cdc79c81f29a2f2b5b7821894675a3bd2dc9737
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 2601ddbe100553d88feba68b8210fb2c3b70930d
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421488"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872831"
 ---
 # <a name="device-message-routing"></a>디바이스 메시지 라우팅
 
@@ -63,7 +63,7 @@ Contoso Management는 DPS를 사용하여 자동 디바이스 등록을 구현�
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab07.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab07.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

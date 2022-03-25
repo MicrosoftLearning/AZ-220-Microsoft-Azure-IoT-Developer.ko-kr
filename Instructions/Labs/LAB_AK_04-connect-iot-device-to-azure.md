@@ -2,12 +2,12 @@
 lab:
   title: '랩 04: IoT 디바이스를 Azure에 연결'
   module: 'Module 2: Devices and Device Communication'
-ms.openlocfilehash: 1859cc4bc1343476a54b09d8b7cdb69359eb849b
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: bae15d047d1666351e9ecb817c45621974c0fe7d
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421548"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872792"
 ---
 # <a name="connect-an-iot-device-to-azure"></a>IoT 디바이스를 Azure에 연결
 
@@ -51,7 +51,7 @@ Contoso는 IoT 디바이스를 사용하여 온도와 습도를 모니터링하�
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
 
     ```text
-    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab04.json
+    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab04.json
     ```
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.

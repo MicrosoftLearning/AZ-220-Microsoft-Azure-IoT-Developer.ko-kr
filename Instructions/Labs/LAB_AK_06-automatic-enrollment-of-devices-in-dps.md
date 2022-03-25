@@ -2,12 +2,12 @@
 lab:
   title: '랩 06: DPS를 통해 IoT 디바이스를 안전하게 대규모로 자동 프로비전'
   module: 'Module 3: Device Provisioning at Scale'
-ms.openlocfilehash: d8d78212ab65723377fa9262f6c6505d797f2725
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: e8e5d66ff173285ebc3c7c40a7815059d899a543
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421539"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872819"
 ---
 # <a name="automatically-provision-iot-devices-securely-and-at-scale-with-dps"></a>DPS를 통해 IoT 디바이스를 안전하게 대규모로 자동 프로비전
 
@@ -47,7 +47,7 @@ Contoso의 자산 모니터링 및 추적 솔루션에 대한 최신 작업을 �
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab06.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab06.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

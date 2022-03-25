@@ -2,12 +2,12 @@
 lab:
   title: '랩 05: DPS에서 디바이스 개별 등록'
   module: 'Module 3: Device Provisioning at Scale'
-ms.openlocfilehash: 6fc4a313720ea0ee30301ab8e8a928bcc9f9a035
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: adb1fa9ec38c29ca93b10c86c765b73189c500d1
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421491"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872834"
 ---
 # <a name="individual-enrollment-of-a-device-in-dps"></a>DPS에서 디바이스 개별 등록
 
@@ -51,7 +51,7 @@ DPS를 사용하여 디바이스 프로비저닝 및 프로비전 해제 프로�
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab05.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab05.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

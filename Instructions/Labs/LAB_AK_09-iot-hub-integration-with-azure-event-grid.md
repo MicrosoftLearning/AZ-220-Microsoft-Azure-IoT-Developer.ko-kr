@@ -2,12 +2,12 @@
 lab:
   title: '랩 09: IoT Hub와 Event Grid 통합'
   module: 'Module 5: Insights and Business Integration'
-ms.openlocfilehash: 94438ccfd21e90f8d8260f779d1380fff2267256
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 85c57fcbf64a6b20636b0ef289d634ef09e9c292
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421494"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872837"
 ---
 # <a name="integrate-iot-hub-with-event-grid"></a>IoT Hub와 Event Grid 통합
 
@@ -47,7 +47,7 @@ Nancy는 사업장 기술자 팀이 다른 치즈 보관소의 온도를 모니�
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab09.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab09.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 

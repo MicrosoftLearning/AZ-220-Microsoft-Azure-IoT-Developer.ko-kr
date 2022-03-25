@@ -2,12 +2,12 @@
 lab:
   title: '랩 14: 제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행'
   module: 'Module 7: Azure IoT Edge Module'
-ms.openlocfilehash: 1413872367a9e3f0364b162a1d671fe8d122c469
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: 70cd39189546491a832411611137448aa5ab7aa3
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421536"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872828"
 ---
 # <a name="run-an-iot-edge-device-in-restricted-network-and-offline"></a>제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행
 
@@ -53,7 +53,7 @@ Contoso의 치즈 포장 및 운송 시설에서 구현한 컨베이어 벨트 �
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab14.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab14.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 
