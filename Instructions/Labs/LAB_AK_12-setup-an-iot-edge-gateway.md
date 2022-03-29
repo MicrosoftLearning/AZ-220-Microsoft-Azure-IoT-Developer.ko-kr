@@ -2,12 +2,12 @@
 lab:
   title: '랩 12: IoT Edge 게이트웨이 설정하기'
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: 70d364787ed2a60596d7e194e9c172b28585d13b
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: ae46d3ae63028630dd3ab56704f07448d96116c1
+ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421530"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "140872822"
 ---
 # <a name="setup-an-iot-edge-gateway"></a>IoT Edge 게이트웨이 설정하기
 
@@ -57,7 +57,7 @@ IoT Edge 디바이스를 게이트웨이로 사용하는 데는 투명, 프로�
 
 1. 가상 머신 환경에서 Microsoft Edge 브라우저 창을 열고 다음 웹 주소로 이동합니다.
  
-    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab12.json+++
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab12.json+++
 
     > **참고**: 녹색 “T” 기호가 표시될 때마다(예: +++이 text+++를 입력) 연결된 텍스트를 클릭하면 가상 머신 환경 내의 현재 필드에 정보가 입력됩니다.
 
@@ -172,11 +172,13 @@ IoT Edge 디바이스를 게이트웨이로 사용하는 데는 투명, 프로�
 > * [IoT Edge 디바이스에서 인증서 관리](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-manage-device-certificates?view=iotedge-2020-11)
 > * [데모 인증서를 만들어 IoT Edge 디바이스 기능 테스트](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-create-test-certificates?view=iotedge-2020-11)
 
-1. **Azure에 배포** 를 선택합니다.
+1. 웹 브라우저를 열고 다음 주소로 이동합니다. 
 
-    [![Azure에 배포](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab12a.json)
+    ```
+    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab12a.json
+    ```
 
-1. 메시지가 표시되면 **Azure Portal** 에 로그인합니다.
+1. 메시지가 표시되면 이 랩에서 사용 중인 Azure 자격 증명을 사용하여 로그인합니다.
 
     **사용자 지정 배포** 페이지가 표시됩니다.
 
