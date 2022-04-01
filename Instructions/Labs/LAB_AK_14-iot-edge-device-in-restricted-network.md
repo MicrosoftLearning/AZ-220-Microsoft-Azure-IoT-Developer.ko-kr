@@ -2,12 +2,12 @@
 lab:
   title: '랩 14: 제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행'
   module: 'Module 7: Azure IoT Edge Module'
-ms.openlocfilehash: 70cd39189546491a832411611137448aa5ab7aa3
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: bbcada29239744e2713770d4b512a1804ed195a2
+ms.sourcegitcommit: 913a1097850a27ac5a950d3b589fe67e3f250846
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872828"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "141143500"
 ---
 # <a name="run-an-iot-edge-device-in-restricted-network-and-offline"></a>제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행
 
@@ -322,8 +322,8 @@ VM을 처음 시작하는 동안 IoT Edge를 구성한 스크립트가 실행되
 
 1. 이 랩의 후반부에 사용하기 위해 루트 인증서를 다운로드하려면 다음 명령을 입력합니다.
 
-    ```bashd
-    download ~/lab12/
+    ```bash
+    download ~/lab12/azure-iot-test-only.root.ca.cert.pem
     ```
 
 ### <a name="exercise-3-configure-iot-edge-device-time-to-live-and-message-storage"></a>연습 3: IoT Edge 디바이스 TTL(Time-to-Live) 및 메시지 스토리지 구성
