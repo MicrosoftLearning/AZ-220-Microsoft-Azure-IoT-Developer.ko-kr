@@ -2,12 +2,12 @@
 lab:
   title: '랩 14: 제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행'
   module: 'Module 7: Azure IoT Edge Module'
-ms.openlocfilehash: bbcada29239744e2713770d4b512a1804ed195a2
-ms.sourcegitcommit: 913a1097850a27ac5a950d3b589fe67e3f250846
+ms.openlocfilehash: ed1a6e21e83fc4b9f0fa22edf68da4ac946adf65
+ms.sourcegitcommit: b9f2c53cb54dde700e21476bcc7435310d15445d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "141143500"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "141604971"
 ---
 # <a name="run-an-iot-edge-device-in-restricted-network-and-offline"></a>제한된 네트워크 및 오프라인에서 IoT Edge 디바이스 실행
 
@@ -623,14 +623,12 @@ IoT Edge 디바이스는 연결이 끊어졌거나 오프라인 된 상태에서
 
 1. 자리 표시자 값을 **sensor-th-0084** IoT 디바이스의 기본 연결 문자열로 바꿉니다.
 
-1. 할당된 **connectionString** 값에 **GatewayHostName** 속성을 추가하고 GatewayHostName의 값을 IoT Edge 게이트웨이 디바이스의 전체 DNS 이름으로 설정합니다.
-
-    Edge 게이트웨이 디바이스의 전체 DNS 이름은 디바이스 ID인 **vm-az220-training-gw0002-{사용자 ID}** 에 지정한 지역 및 Azure 상업용 클라우드 도메인 이름(예: **.westus2.cloudapp.azure.com**)이 추가된 형식입니다.
+1. 할당된 **connectionString** 값에 **GatewayHostName** 속성을 추가하고 GatewayHostName의 값을 IoT Edge 게이트웨이 디바이스의 이름으로 설정합니다. 이 이름은 이 랩의 앞부분에서 호스트 파일에 제공된 이름과 일치해야 합니다.
 
     완성된 연결 문자열 값은 다음 형식과 일치해야 합니다.
 
     ```text
-    HostName=<IoT-Hub-Name>.azure-devices.net;DeviceId=sensor-th-0072;SharedAccessKey=<Primary-Key-for-IoT-Device>;GatewayHostName=<DNS-Name-for-IoT-Edge-Device>
+    HostName=<IoT-Hub-Name>.azure-devices.net;DeviceId=sensor-th-0072;SharedAccessKey=<Primary-Key-for-IoT-Device>;GatewayHostName=<Name-for-IoT-Edge-Device>
     ```
 
     위에 표시된 자리 표시자를 적절한 값으로 바꾸세요.

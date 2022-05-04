@@ -2,12 +2,12 @@
 lab:
   title: '랩 12: IoT Edge 게이트웨이 설정하기'
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: ae46d3ae63028630dd3ab56704f07448d96116c1
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: a710ea3e39a2c63da58925f669b7bdb8f983a4e7
+ms.sourcegitcommit: b9f2c53cb54dde700e21476bcc7435310d15445d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872822"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "141604968"
 ---
 # <a name="setup-an-iot-edge-gateway"></a>IoT Edge 게이트웨이 설정하기
 
@@ -626,9 +626,7 @@ VM을 처음 시작하는 동안 IoT Edge를 구성한 스크립트가 실행되
 
 1. **connectionString** 변수의 선언을 찾은 다음 자리 표시자 값을 **sensor-th-0072** IoT 디바이스의 기본 연결 문자열로 바꿉니다.
 
-1. 할당된 **connectionString** 값에 **GatewayHostName** 속성을 추가하고 GatewayHostName의 값을 IoT Edge 게이트웨이 디바이스의 전체 DNS 이름으로 설정합니다.
-
-    Edge 게이트웨이 디바이스의 전체 DNS 이름은 디바이스 ID인 **vm-az220-training-gw0001-{사용자 ID}** 에 지정한 지역 및 Azure 상업용 클라우드 도메인 이름(예: **.westus2.cloudapp.azure.com**)이 추가된 형식입니다.
+1. 할당된 **connectionString** 값에 **GatewayHostName** 속성을 추가하고 GatewayHostName의 값을 IoT Edge 게이트웨이 디바이스의 이름으로 설정합니다. 이 이름은 이 랩의 앞부분에서 호스트 파일에 제공된 이름과 일치해야 합니다.
 
     완성된 연결 문자열 값은 다음 형식과 일치해야 합니다.
 
