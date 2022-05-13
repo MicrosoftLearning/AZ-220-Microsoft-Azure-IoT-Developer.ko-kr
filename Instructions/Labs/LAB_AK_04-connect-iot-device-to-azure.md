@@ -2,12 +2,12 @@
 lab:
   title: '랩 04: IoT 디바이스를 Azure에 연결'
   module: 'Module 2: Devices and Device Communication'
-ms.openlocfilehash: bae15d047d1666351e9ecb817c45621974c0fe7d
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: 024b4b28e920cb7193c1272bec4fde3d697d93ec
+ms.sourcegitcommit: b1a2557baf4854683036fde125ada75c6f3dbbfd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872792"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "141200493"
 ---
 # <a name="connect-an-iot-device-to-azure"></a>IoT 디바이스를 Azure에 연결
 
@@ -209,7 +209,9 @@ Azure IoT 디바이스 SDK에서는 디바이스 클라이언트를 사용하여
     dotnet add package Microsoft.Azure.Devices.Client
     ```
 
-    > **참고**: .NET 용 Azure IoT 디바이스 SDK가 들어 있는 **Microsoft.Azure.Devices.Client** 패키지에는 **Newtonsoft.Json** 패키지가 종속성으로 포함되어 있습니다. **Newtonsoft.Json** 패키지에 포함된 API를 활용하면 JSON을 만들고 조작할 수 있습니다.
+    > **참고**: .NET 용 Azure IoT 디바이스 SDK가 들어 있는 **Microsoft.Azure.Devices.Client** 패키지에는 **Newtonsoft.Json** 패키지가 종속성으로 포함되어 있습니다. **Newtonsoft.Json** 패키지에 포함된 API를 활용하면 JSON을 만들고 조작할 수 있습니다. 필요한 경우 `dotnet add package Newtonsoft.Json`을 사용하여 Newtonsoft.Json 패키지를 설치합니다.
+
+    > **중요**: “패키지에 사용할 수 있는 버전이 없습니다.” 오류가 발생하면 개발 환경의 NuGet 구성 파일을 업데이트해야 할 수 있습니다. `dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json` 명령을 실행한 다음, dotnet add package 명령을 다시 시도합니다.
 
     다음 작업에서 시뮬레이션된 디바이스 앱을 빌드하고 테스트합니다.
 
@@ -289,7 +291,7 @@ Azure IoT 디바이스 SDK에서는 디바이스 클라이언트를 사용하여
     ```csharp
     using System;
 
-    namespace CaveSensor
+    namespace CaveDevice
     {
         class Program
         {
@@ -309,7 +311,7 @@ Azure IoT 디바이스 SDK에서는 디바이스 클라이언트를 사용하여
         System.Console.WriteLine("Hello World!");
         ```
 
-    * `namespace` 부분 - 네임스페이스 뒤의 `{ }` 안에 들어 있는 클래스가 해당 네임스페이스의 일부분임을 지정합니다. 즉, 위의 예제에서 **Console** 이 **System** 네임스페이스의 일부분인 것처럼 **Program** 클래스는 **CaveSensor** 네임스페이스의 일부분이며 해당 클래스의 전체 이름은 **CaveSensor.Program** 입니다.
+    * `namespace` 부분 - 네임스페이스 뒤의 `{ }` 안에 들어 있는 클래스가 해당 네임스페이스의 일부분임을 지정합니다. 즉, 위의 예제에서 **Console** 이 **System** 네임스페이스의 일부인 것처럼 **Program** 클래스는 **CaveDevice** 네임스페이스의 일부이며 해당 클래스의 전체 이름은 **CaveDevice.Program** 입니다.
 
     * `class` 부분 - **Program** 클래스의 내용을 정의합니다. 소스 파일 하나에 클래스를 여러 개 포함할 수 있습니다.
 
@@ -358,23 +360,16 @@ Azure IoT 디바이스 SDK에서는 디바이스 클라이언트를 사용하여
 
     ```csharp
     // INSERT using statements below here
-
     namespace CaveDevice
     {
         class Program
         {
             // INSERT variables below here
-
             // INSERT Main method below here
-
             // INSERT SendDeviceToCloudMessagesAsync method below here
-
             // INSERT CreateMessageString method below here
-
         }
-
         // INSERT EnvironmentSensor class below here
-
     }
     ```
 
@@ -417,7 +412,7 @@ Azure IoT 디바이스 SDK에서는 디바이스 클라이언트를 사용하여
 
     **deviceClient** 변수는 **DeviceClient** 의 인스턴스를 저장하는 데 사용됩니다. Azure IoT 디바이스 SDK에서 제공되는 DeviceClient 클래스에는 디바이스가 IoT Hub와 메시지를 주고받는 데 사용할 수 있는 메서드가 포함되어 있습니다.
 
-    **connectionString** 변수에는 앞에서 만든 디바이스용 연결 문자열이 포함됩니다. **DeviceClient** 에서는 이 값을 사용하여 IoT Hub에 연결합니다.
+    **connectionString** 변수에는 앞에서 만든 디바이스용 연결 문자열이 포함됩니다. **DeviceClient** 에서는 이 값을 사용하여 IoT Hub에 연결합니다. 다음 단계에서 connectionStrin의 값을 지정합니다.
 
     > **중요**: 이 과정 전반에 포함된 이 랩과 다른 랩에서 연결 문자열, 암호 및 기타 구성 정보를 애플리케이션에 하드 코드하는 예제를 살펴보게 됩니다. 이러한 하드 코드 방식은 랩을 쉽게 진행하기 위한 용도로만 사용되며, 권장 방식이 **아닙니다**. 랩에서는 이와 같은 보안 이슈가 대두됨에 따라 가능한 한도 내에서 문제가 처리됩니다. 보안 주제(및 기타 중요한 고려 사항)는 교육 과정의 전체적인 흐름을 지원하는 방식으로 강사 프레젠테이션과 학생용 핸드북 콘텐츠에서 다룰 것입니다. 두 가지가 항상 완벽하게 일치하지 않을 수 있습니다. 따라서 랩을 진행하는 과정에서 교육 과정의 후반부 전까지는 자세히 다루지 않는 항목을 보게 될 수 있습니다.
 

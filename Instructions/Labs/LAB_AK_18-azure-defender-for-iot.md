@@ -2,12 +2,12 @@
 lab:
   title: '랩 18: Azure Defender for IoT를 사용하여 IoT 디바이스가 변조되었는지 검색'
   module: 'Module 10: Azure Defender and IoT Security'
-ms.openlocfilehash: a2259bf2d5db54f00022d54d2cd9cbf2dc5c3f6f
-ms.sourcegitcommit: 7874419a1f0f346f972914893b4b3644ba84a267
+ms.openlocfilehash: c1a1aa4fe7f487f4ab2c99ff62cd881b289ea80f
+ms.sourcegitcommit: b1a2557baf4854683036fde125ada75c6f3dbbfd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2022
-ms.locfileid: "139262459"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "141200499"
 ---
 # <a name="detect-device-tampering-with-azure-defender-for-iot"></a>Azure Defender for IoT를 사용하여 디바이스 변조 검색
 
@@ -159,6 +159,8 @@ Azure Defender for IoT가 켜져 있으면 IoT 디바이스, IoT Edge 및 IoT Hu
 1. **리소스 그룹** 드롭다운에서 **rg-az220** 을 클릭합니다.
 
 1. **위치** 드롭다운에서 가장 가까운 Azure 지역이나 Azure IoT Hub가 프로비전되어 있는 지역을 선택합니다.
+
+    사용 가능한 지역을 보려면 [https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all)을 참조하세요.
 
 1. **가격 책정 계층** 에서 **종량제** 가 선택되어 있는지 확인합니다.
 

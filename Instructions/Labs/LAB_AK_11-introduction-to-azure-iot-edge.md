@@ -2,12 +2,12 @@
 lab:
   title: '랩 11: Azure IoT Edge 소개'
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: e68d422adaff8789d45491214f902c6cf62ebe47
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: a223c0aa8abc8c5a16e81d343a0f94a6b9bbdf36
+ms.sourcegitcommit: 88ea18cdadb26810b563a54c06ce5e98344bcd92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872840"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "141258554"
 ---
 # <a name="introduction-to-azure-iot-edge"></a>Azure IoT Edge 소개
 
@@ -317,7 +317,7 @@ Azure IoT Edge 솔루션의 프로토타입을 생성하는 업무를 맡았습�
 
     사용자 정의 모듈의 이름을 "tempsensor"로 지정할 것입니다.
 
-1. **이미지 URI** 에 **asaedgedockerhubtest/asa-edge-test-module:simulated-temperature-sensor** 를 입력합니다.
+1. **이미지 URI** 아래에 **mcr.microsoft.com/azureiotedge-simulated-temperature-sensor** 를 입력합니다.
 
     > **참고**: 이 이미지는 이 테스트 시나리오를 지원하기 위해 제품 그룹에서 제공하는 Docker Hub에 게시된 이미지입니다.
 
