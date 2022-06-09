@@ -2,12 +2,12 @@
 lab:
   title: '랩 03: 개발 환경 설정'
   module: 'Module 2: Devices and Device Communication'
-ms.openlocfilehash: 4319c13ddf4eeea8487c677b5f05d88bc386d3d3
-ms.sourcegitcommit: 06dc1e6caa88a09b1246dd1161f15f619db9c6f8
+ms.openlocfilehash: ff8debfc695c847537f93449f9849775b2945b9c
+ms.sourcegitcommit: 7281efeb9cb5654361c2f1aa93aea724a3898966
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138421557"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955881"
 ---
 # <a name="set-up-the-development-environment"></a>개발 환경 설정
 
@@ -284,11 +284,7 @@ IoT Edge 및 Docker를 지원하기 위해 Python 3.9을 사용합니다.
 
     Windows 설정을 사용하여 Windows 기능 대화 상자를 연 다음 해당 대화 상자를 통해 Hyper-V 및 컨테이너가 활성화되어 있는지 확인할 수 있습니다.
 
-1. **Docker Hub에서 다운로드** 를 클릭합니다.
-
-1. Windows용 Docker Desktop 아래에서 **Windows용 Docker Desktop 가져오기(안정적)** 를 클릭합니다.
-
-1. 설치를 시작하려면 **실행** 을 클릭합니다.
+1. **Windows Docker Desktop을** 클릭한 다음 화면의 지침에 따라 다운로드한 설치 파일을 열고 실행합니다.
 
     Docker Desktop에 대한 설치 대화 상자가 나타나려면 다소 시간이 걸릴 수 있습니다.
 
