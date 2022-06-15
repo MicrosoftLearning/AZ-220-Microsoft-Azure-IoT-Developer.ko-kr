@@ -2,12 +2,12 @@
 lab:
   title: '랩 13: VS 코드로 Azure IoT Edge에서 사용자 지정 모듈 개발, 배포, 디버깅'
   module: 'Module 7: Azure IoT Edge Modules'
-ms.openlocfilehash: 4908d19567e43a164d559638467ea4d3373c6902
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: 9586c15c0e16a0bdbe7850a0c28af480dcf34086
+ms.sourcegitcommit: 7281efeb9cb5654361c2f1aa93aea724a3898966
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872795"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955884"
 ---
 # <a name="develop-deploy-and-debug-a-custom-module-on-azure-iot-edge-with-vs-code"></a>VS 코드로 Azure IoT Edge에서 사용자 지정 모듈 개발, 배포 및 디버깅
 
@@ -56,7 +56,7 @@ ms.locfileid: "140872795"
 | 리소스 종류 | 리소스 이름 |
 | :-- | :-- |
 | 리소스 그룹 | rg-az220 |
-| IoT Hub | iot-az220-training-{사용자 ID} |
+| IoT Hub | iot-az220-training-{your-id} |
 
 이러한 리소스를 사용할 수 있게 하려면 다음 단계를 완료합니다.
 
@@ -174,9 +174,9 @@ Azure Container Registry는 컨테이너 배포를 위해 비공개 Docker 이�
 
 1. **컨테이너 레지스트리 만들기** 블레이드에서 **레지스트리 이름** 아래에 전역고유의 이름을 입력합니다.
 
-    전역적으로 고유한 이름을 입력하려면 +++acraz220training{사용자 ID}+++를 입력합니다.
+    전역적으로 고유한 이름을 입력하려면 +++acraz220training{your-id}+++를 입력합니다.
 
-    예: **acraz220trainingcah191204**
+    예: **acraz220trainingcah220531**
 
     Azure Container Registry의 이름은 전역적으로 고유해야 합니다. IP에 연결된 모든 디바이스에서 액세스할 수 있어야 하는 공개적으로 액세스할 수 있는 리소스이기 때문입니다.
 
@@ -206,13 +206,13 @@ Azure Container Registry는 컨테이너 배포를 위해 비공개 Docker 이�
 
 #### <a name="task-2-connect-docker-to-the-container-registry"></a>작업 2: 컨테이너 레지스트리에 Docker 연결
 
-1. 대시보드에서 리소스 타일을 새로 고친 다음 **acraz220training{사용자 ID}** 를 클릭합니다.
+1. 대시보드에서 리소스 타일을 새로 고친 다음 **acraz220training{your-id}** 를 클릭합니다.
 
 1. 왼쪽 탐색 메뉴에서 **설정** 에서 **액세스 키** 를 클릭합니다.
 
 1. **관리 사용자** 에서 **사용** 을 클릭합니다.
 
-    이 옵션을 사용하면 레지스트리 이름을 사용자 이름으로 및 관리 사용자 액세스 키를 암호로 사용하여  Azure Container Registry 서비스에 Docker 로그인할 수 있습니다.
+    이 옵션을 사용하면 레지스트리 이름을 사용자 이름으로 사용하고 관리 사용자 액세스 키를 암호로 사용하여 Azure Container Registry 서비스에 로그인할 수 있습니다.
 
 1. 다음 값을 기록합니다.
 
@@ -220,7 +220,7 @@ Azure Container Registry는 컨테이너 배포를 위해 비공개 Docker 이�
     * **사용자 이름**
     * **password**
 
-    기본적으로 관리자 사용자 이름은 ACR 이름과 일치하는 **acraz220training{사용자 ID}** 입니다.
+    기본적으로 관리자 사용자 이름은 ACR 이름과 일치하는 **acraz220training{your-id}** 입니다.
 
     이 정보를 통해 다음 단계에서 Docker 작업을 수행하는 데 필요한 새 레지스트리에 인증할 수 있습니다.
 
@@ -434,7 +434,7 @@ Azure Container Registry를 만들고 로컬 컴퓨터를 인증한 이제 레�
 
     Azure 계정이 두 개 이상인 경우 이 과정에 사용할 구독에 연결된 계정으로 로그인해야 합니다.
 
-1. 리소스 그룹 타일에서 **iot-az220-training-{사용자 ID}** 를 클릭합니다.
+1. 리소스 그룹 타일에서 **iot-az220-training-{your-id} 를 클릭합니다.
 
 1. 왼쪽 탐색 메뉴의 **보안 설정** 아래에서 **공유 액세스 정책** 을 클릭하세요.
 
@@ -629,7 +629,7 @@ Azure Container Registry를 만들고 로컬 컴퓨터를 인증한 이제 레�
 
     Azure 계정이 두 개 이상인 경우 이 과정에 사용할 구독에 연결된 계정으로 로그인해야 합니다.
 
-1. ACR(Azure Container Registry) 서비스를 열려면 리소스 그룹 타일에서 **acraz220training{사용자 ID}** 를 클릭합니다.
+1. ACR(Azure Container Registry) 서비스를 열려면 리소스 그룹 타일에서 **acraz220training{your-id}** 를 클릭합니다.
 
 1. 왼쪽 탐색 메뉴에서 **서비스** 에서 **리포지토리** 를 클릭합니다.
 
@@ -671,7 +671,7 @@ Azure Container Registry를 만들고 로컬 컴퓨터를 인증한 이제 레�
 
     사용자 지정 `objectcountingmodule` IoT Edge 모듈을 ACR(Azure Container Registry)에 게시하면 다음 단계는 IoT Hub 내에서 새 IoT Edge 디바이스를 만들고 새 사용자 지정 IoT Edge 모듈을 실행하도록 구성하는 것입니다.
 
-1. **iot-az220-training-{사용자 ID}** 블레이드 왼쪽 탐색 메뉴의 **디바이스 관리** 아래에서 **IoT Edge** 를 클릭합니다.
+1. **iot-az220-training-{your-id}** 블레이드 왼쪽 탐색 메뉴의 **디바이스 관리** 아래에서 **IoT Edge** 를 클릭합니다.
 
 1. **IoT Edge** 창 상단에서 **IoT Edge 디바이스 추가** 를 클릭합니다.
 

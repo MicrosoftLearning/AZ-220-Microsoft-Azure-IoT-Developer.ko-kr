@@ -284,7 +284,7 @@ IoT Edge 및 Docker를 지원하기 위해 Python 3.9을 사용합니다.
 
     Windows 설정을 사용하여 Windows 기능 대화 상자를 연 다음 해당 대화 상자를 통해 Hyper-V 및 컨테이너가 활성화되어 있는지 확인할 수 있습니다.
 
-1. **Windows Docker Desktop을** 클릭한 다음 화면의 지침에 따라 다운로드한 설치 파일을 열고 실행합니다.
+1. **Windows용 Docker Desktop** 을 클릭한 다음, 화면 지침에 따라 다운로드된 설치 파일을 열고 실행합니다.
 
     Docker Desktop에 대한 설치 대화 상자가 나타나려면 다소 시간이 걸릴 수 있습니다.
 

@@ -2,12 +2,12 @@
 lab:
   title: '랩 10: Time Series Insights로 시간이 기록된 데이터 탐색 및 분석'
   module: 'Module 5: Insights and Business Integration'
-ms.openlocfilehash: 9f6491dadc9d4443575690d00c92805b12b2f874
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
+ms.openlocfilehash: fd17b8e705bbd280adb47873c2d862da7ed66be3
+ms.sourcegitcommit: d1db4018f68e024ddb742eea332060a9892e5962
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872798"
+ms.lasthandoff: 05/30/2022
+ms.locfileid: "145942964"
 ---
 # <a name="explore-and-analyze-time-stamped-data-with-time-series-insights"></a>Time Series Insights로 시간이 기록된 데이터 탐색 및 분석
 
@@ -84,7 +84,33 @@ Azure IoT 솔루션에 Time Series Insights를 추가하는 것을 제안합니�
 
 1. 유효성 검사를 통과하면 **만들기** 를 클릭합니다.
 
-    배포가 시작됩니다.
+    배포가 시작됩니다. 필요한 Azure 리소스를 배포하는 데 몇 분 정도 걸립니다.
+
+1. Azure 리소스를 만드는 동안 텍스트 편집기 도구를 엽니다(메모장은 **시작** 메뉴, **Windows 액세서리** 아래에서 액세스할 수 있음). 
+
+    > **참고**: 텍스트 편집기를 사용하여 Azure 리소스와 연결된 일부 구성 값을 저장합니다.
+
+1. 텍스트 편집기에서 다음 텍스트 레이블을 입력합니다.
+
+    - connectionString-iothub:
+
+    - deviceID-truck:
+
+    - connectionString-truck:
+
+    - deviceID-airplane:
+
+    - connectionString-airplane:
+
+    - deviceID-container:
+
+    - connectionString-container:
+
+1. Azure Portal 창으로 다시 전환하고 배포가 완료되기를 기다립니다.
+
+    배포가 완료되면 알림이 표시됩니다.
+
+    > **참고**: createDevice 작업 중에 배포에 실패하면 아래 나열된 단계를 찾아서 디바이스를 수동으로 만듭니다.
 
 1. 배포가 완료되면 왼쪽 탐색 영역에서 템플릿의 출력 값을 검토하려면 **출력** 을 클릭합니다.
 
@@ -93,7 +119,7 @@ Azure IoT 솔루션에 Time Series Insights를 추가하는 것을 제안합니�
     * connectionString
     * deviceIDs
 
-    > **중요**: deviceIDs 출력에는 각 디바이스의 연결 문자열이 있는 JSON 배열이 포함됩니다. 선택한 텍스트 편집기를 사용하여 연결 문자열을 추출합니다.
+    > **참고**: deviceIDs 출력에는 각 디바이스의 연결 문자열이 있는 JSON 배열이 포함됩니다. 선택한 텍스트 편집기를 사용하여 디바이스 이름과 연결 문자열을 기록합니다.
 
     ```json
     [
@@ -112,7 +138,49 @@ Azure IoT 솔루션에 Time Series Insights를 추가하는 것을 제안합니�
     ]
     ```
 
-이제 리소스가 만들어졌습니다.
+    > **중요**: createDevice 작업 중에 배포에 실패하면 **출력** 창이 비어 있습니다. 다음 단계를 완료하여 필요한 IoT 디바이스와 IoT 허브 및 디바이스 연결 문자열의 레코드를 만듭니다.
+
+    1. Azure Portal 메뉴에서 **대시보드** 를 클릭합니다.
+
+    1. **모든 리소스** 타일에서 IoT 허브를 열려면 **iot-az220-training-{your-id}** 를 클릭합니다.
+
+    1. IoT 허브 블레이드의 **디바이스 관리** 에서 **디바이스** 를 클릭합니다.
+
+    1. 디바이스 페이지에서 **+ 디바이스 추가** 를 클릭합니다.
+
+    1. 디바이스 만들기 페이지의 **디바이스 ID** 아래에 **sensor-th-0001** 을 입력합니다.
+
+        +++sensor-th-truck0001+++
+
+    1. 페이지 맨 아래에 있는 **저장** 을 클릭합니다.
+
+    1. 이전 세 단계를 반복하여 디바이스 ID가 **sensor-th-airplane0001** 및 **sensor-th-container0001** 인 IoT 디바이스를 만듭니다.
+
+        +++sensor-th-airplane0001+++
+
+        +++sensor-th-container0001+++
+
+    1. 디바이스 페이지의 **디바이스 ID** 아래에서 **sensor-th-truck0001** 을 클릭합니다.
+
+        디바이스가 나열되지 않으면 디바이스 페이지에서 **새로 고침** 을 클릭합니다.
+
+    1. sensor-th-truck0001 페이지의 **디바이스 ID** 값 오른쪽에서 **복사** 를 클릭한 다음, 텍스트 편집기 파일에 값을 저장합니다.
+
+    1. sensor-th-truck0001 페이지에서 **기본 연결 문자열** 값을 복사한 다음, 텍스트 편집기 파일에 저장합니다.
+
+    1. 이전 세 단계를 반복하여 **sensor-th-airplane0001** 및 **sensor-th-container0001** 디바이스에 대한 디바이스 ID와 기본 연결 문자열 값을 기록합니다.
+
+    1. IoT 허브 블레이드로 돌아갑니다.
+
+    1. 왼쪽 메뉴의 **보안 설정** 아래에서 **공유 액세스 정책** 을 클릭합니다.
+
+    1. **iothubowner** 를 클릭합니다.
+
+    1. IoT 허브 기본 연결 문자열이 나열됩니다.
+
+    1. IoT 허브 기본 연결 문자열의 값을 복사하고 텍스트 편집기 파일에 저장합니다.
+
+    이제 이 랩에 필요한 Azure 리소스를 사용할 수 있습니다.
 
 ### <a name="exercise-2-setup-time-series-insights"></a>연습 2: Time Series Insights 설정
 
@@ -120,9 +188,9 @@ Azure TSI(Time Series Insights)는 IoT 솔루션에서 규모에 맞게 데이�
 
 이 연습에서는 Time Series Insights와 Azure IoT Hub의 통합을 설정합니다.
 
-1. Azure 계정 자격 증명을 사용하여 [portal.azure.com](https://portal.azure.com)에 로그인합니다.
+1. Azure Portal 메뉴를 사용하여 대시보드로 이동합니다.
 
-    Azure 계정이 두 개 이상인 경우 이 과정에 사용할 구독에 연결된 계정으로 로그인해야 합니다.
+    필요한 경우 Azure 계정 자격 증명을 사용하여 [portal.azure.com](https://portal.azure.com)에 로그인합니다. Azure 계정이 두 개 이상인 경우 이 과정에 사용할 구독에 연결된 계정으로 로그인해야 합니다.
 
 1. Azure Portal 메뉴에서 **+ 리소스 만들기** 를 클릭합니다.
 
@@ -132,67 +200,67 @@ Azure TSI(Time Series Insights)는 IoT 솔루션에서 규모에 맞게 데이�
 
 1. **Time Series Insights** 블레이드에서 **만들기** 를 클릭합니다.
 
+    Time Series Insights 환경 만들기 페이지가 열리면 Time Series Insights는 2025년 3월 이후에 지원되지 않는다는 경고가 표시될 수 있습니다. 프로덕션 시나리오에 대한 다른 옵션은 탐색해야 합니다.
+
 1. **구독** 드롭다운에서 이 과정에서 사용할 구독을 선택합니다.
 
 1. **리소스 그룹** 드롭다운에서 **rg-az220** 을 클릭합니다.
 
-1. **Time Series Insights 환경 만들기** 블레이드에서 **환경 이름** 필드에 **tsi-az220-training** 을 입력합니다.
+1. **환경 이름** 필드에 **tsi-az220-training-{your-id}** 를 입력합니다.
 
 1. **위치** 드롭다운에서 리소스 그룹에서 사용하는 Azure 지역을 선택합니다.
 
 1. **계층** 필드에서 **Gen1(S1)** 가격 책정 계층이 선택되어 있으며 **용량** 이 **1** 로 설정되어 있는지 확인합니다.
 
-1. **환경 이름** 필드에 **tsi-az220-training-{사용자 ID}** 를 입력합니다.
-
 1. 블레이드 하단에서 **다음: 이벤트 원본** 을 클릭합니다.
 
-1. **이벤트 원본 세부 정보** 섹션에서 **이벤트 소스를 만드시겠습니까?** 가 **예** 로 설정되어 있는지 확인합니다.
+1. **이벤트 원본** 탭에서 **이벤트 원본 만들기** 가 **예** 로 설정되고 **원본 유형** 이 **IoT Hub** 로 설정되었는지 확인합니다.
 
-1. **소스 유형** 드롭다운에서 **IoT Hub** 가 선택되어 있는지 확인합니다.
-
-1. **이름** 필드에 **iot-az220-training-{사용자 ID}** 를 입력하여 이 이벤트 원본의 고유한 이름을 지정합니다.
+1. **이름** 필드에 **iot-az220-training-{your-id}** 를 입력하여 이 이벤트 원본의 고유한 이름을 지정합니다.
 
 1. **구독** 드롭다운에서 이 과정에서 사용할 구독을 선택합니다.
 
-1. **IoT Hub 이름** 드롭다운에서 이미 프로비전된 **iot-az220-training-{사용자 ID}** Azure IoT Hub 서비스를 선택합니다.
+1. **IoT Hub 이름** 드롭다운에서 이미 프로비전된 **iot-az220-training-{your-id}** Azure IoT Hub 서비스를 선택합니다.
 
 1. **IoT Hub 액세스 정책 이름** 드롭다운에서 **iothubowner** 를 클릭합니다.
 
     프로덕션 환경에서는 TSI(Time Series Insights) 액세스를 구성하는 데 사용할 Azure IoT Hub에 새 _액세스 정책_ 을 만드는 것이 좋습니다. 이렇게 하면 동일한 Azure IoT Hub에 연결된 다른 서비스와 독립적으로 TSI의 보안을 관리할 수 있습니다.  편의를 위해 여기서는 이 작업을 수행하지 않습니다.
 
-1. **소비자 그룹** 섹션에서 **IoT Hub 소비자 그룹** 드롭다운 옆에 있는 **새로 만들기** 를 클릭합니다.
+1. **IoT Hub 소비자 그룹** 드롭다운의 오른쪽에서 **새로 만들기** 를 클릭합니다.
+
+    이렇게 하면 제공할 이름을 사용하여 새 소비자 그룹을 추가할 수 있습니다.
 
 1. **IoT Hub 소비자 그룹** 상자에 **tsievents** 를 입력한 다음 **추가** 를 클릭합니다.
 
     이렇게 하면 이 이벤트 원본에 사용할 새 _소비자 그룹_ 이 추가됩니다. 한 번에 지정된 소비자 그룹에서 활성 판독기가 하나만 있을 수 있기 때문에 소비자 그룹은 이 이벤트 원본에만 사용해야 합니다.
 
-1. **시작 옵션** 섹션의 **시작 시간** 드롭다운에서 **지금 시작(기본값)** 을 선택합니다.
+1. **시작 옵션** 섹션 아래 **시작 시간** 드롭다운에서 **지금 시작(기본값)** 을 선택합니다.
 
-1. **타임스탬프** 섹션에서 **속성 이름** 을 비워둡니다.
+1. **타임스탬프** 섹션 아래에서 **속성 이름** 을 기본값(공백)으로 유지합니다.
 
 1. 블레이드 아래쪽에서 **검토 + 만들기** 를 클릭합니다.
 
     > **참고**: *이벤트 원본* 창으로 바로 돌아갈 경우, **IoT Hub 소비자 그룹** 필드의 오른쪽에 있는 **추가** 를 클릭했는지 다시 한 번 확인합니다. 소비자 그룹을 만들 때까지 TSI 리소스를 만들 수 없습니다.
 
-1. 블레이드 하단에서 **만들기** 를 클릭합니다.
+1. 블레이드 아래쪽에서 **검토 + 만들기** 를 클릭합니다.
 
-    > **참고**:  TSI(Time Series Insights) 배포를 완료하는 데 몇 분 정도 걸릴 수 있습니다.
+1. 요약 탭이 표시되면 **검토 + 만들기** 를 클릭한 다음, **확인** 을 클릭합니다.
 
 1. Time Series Insights 배포가 완료되면 대시보드로 다시 이동합니다.
 
-1. 리소스 그룹 타일을 새로 고친 다음 **tsi-az220-training** 을 클릭합니다.
+1. 리소스 그룹 타일을 새로 고친 다음, **tsi-az220-training-{your-id}** 를 클릭합니다.
 
     모든 리소스를 보기 위해 대시보드 크기를 조정해야 할 수 있습니다.
 
-    > **참고**: **Time Series Insights 환경** 리소스의 이름을 **tsi-az220-training** 으로 지정했습니다. 만든 *Time Series Insights 이벤트 원본* 도 표시되지만, 현재로서는 TSI 환경을 열려고 합니다.
+    > **참고**: **Time Series Insights 환경** 리소스의 이름을 **tsi-az220-training-{your-id}** 로 지정했습니다. 만든 *Time Series Insights 이벤트 원본* 도 표시되지만, 현재로서는 TSI 환경을 열려고 합니다.
 
 1. **Time Series Insights 환경** 블레이드의 왼쪽 메뉴에서 **설정** 아래에 있는 **이벤트 원본** 을 클릭합니다.
 
-1. **이벤트 원본** 창의 목록에서 **iot-az220-training-{사용자 ID}** 이벤트 원본을 확인합니다.
+1. **이벤트 원본** 창의 목록에서 **iot-az220-training-{your-id}** 이벤트 원본을 확인합니다.
 
     이 항목이 TSI 리소스를 만들 때 구성한 이벤트 원본입니다.
 
-1. 이벤트 원본 세부 정보를 보려면 **iot-az220-training-{사용자 ID}** 를 클릭합니다.
+1. 이벤트 원본 세부 정보를 확인하려면 **tsi-az220-training-{your-id}** 를 클릭합니다.
 
     이벤트 원본의 구성은 Time Series Insights 리소스가 생성될 때 설정된 구성과 일치합니다.
 
@@ -280,11 +348,25 @@ Azure TSI(Time Series Insights)는 IoT 솔루션에서 규모에 맞게 데이�
 
     Azure 계정이 두 개 이상인 경우 이 과정에 사용할 구독에 연결된 계정으로 로그인해야 합니다.
 
-1. 리소스 그룹 타일에서 **tsi-az220-training** 을 클릭합니다.
+1. 리소스 그룹 타일에서 **tsi-az220-training-{your-id}** 를 클릭합니다.
 
 1. **Time Series Insights 환경** 블레이드의 **개요** 창 상단에서 **TSI 탐색기로 이동** 을 클릭합니다.
 
     그러면 새 브라우저 탭에서 **Time Series Insights 탐색기** 가 열립니다.
+
+    > **참고**: “선택한 사용자 계정이 테넌트 ‘Microsoft 서비스’에 존재하지 않고 애플리케이션에 액세스할 수 없습니다.”라는 메시지가 표시되는 경우 앱을 열려고 할 때 Azure 구독 계정의 사용자 계정 이름이 Microsoft Graph(Active Directory Graph)에 의해 조정되지 않을 수 있습니다. 이 문제를 해결하려면 다음 프로세스를 사용합니다.  
+
+    - 구독 계정과 연결된 AAD 테넌트에 새 사용자를 추가합니다.
+
+        예를 들어, Azure Portal에서 Cloud Shell을 열고 다음 명령을 입력합니다. az ad user create --display-name tsi --password pass123! --user-principal-name tsi@personalaccount.onmicrosoft.com
+
+        다음 명령을 사용하여 구독 계정에 대한 사용자 계정 이름의 테넌트 부분을 볼 수 있습니다. az ad signed-in-user show --query "userPrincipalName" -o tsv
+
+    - Azure Portal(구독 계정으로 로그인됨)에서 액세스 제어(IAM)를 열고 새 사용자에 대한 역할 할당을 소유자로 추가합니다.
+
+    - Azure 대시보드에서 TSI 리소스를 열고, 데이터 액세스 정책을 연 다음, 보안 주체 선택을 사용하여 새 사용자 계정을 기여자로 추가합니다.
+
+    - TSI 탐색기를 여는 경우(**TSI 탐색기로 이동**)에는 위에서 만든 사용자의 사용자 이름(서비스 주체 이름) 및 암호를 입력합니다.
 
 1. 왼쪽 메뉴에서 **분석** 이 선택되어 있는지 확인합니다.
 
